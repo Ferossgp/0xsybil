@@ -1,3 +1,4 @@
+import SessionProvider from '@/components/SessionProvider'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center justify-between p-6">
+        <main className="flex min-h-screen flex-col items-center justify-between p-6 relative">
           <div className="flex flex-col flex-1 w-full bg-white rounded-3xl shadow-sm p-6">
-            {children}
+            <SessionProvider>
+              {children}
+            </SessionProvider>
           </div>
         </main>
       </body>
