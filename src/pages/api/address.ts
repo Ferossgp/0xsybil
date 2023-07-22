@@ -11,8 +11,8 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
 
-  const aa = await attestData("0x6b931a072451a72E49515E5E22e8Eb71511514b5".toLowerCase())
-  console.log("aaaa", aa)
+  // const aa = await attestData("0x6b931a072451a72E49515E5E22e8Eb71511514b5".toLowerCase())
+  // console.log("aaaa", aa)
 
   const { searchParams } = new URL(req.url)
   const address = searchParams.get('address')
