@@ -14,7 +14,7 @@ export default function Home() {
           <b className="w-32">Snapshot:</b>
           <Input className="flex-1" value="0x1275828152a7f044dca9768212b108df346cd04c0680cd3a6249e8e1f3adddbc" disabled />
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4">
           <b className="w-32">Addresses:</b>
           <div className="flex flex-col flex-1 gap-4">
             {addresses.map((address) => (

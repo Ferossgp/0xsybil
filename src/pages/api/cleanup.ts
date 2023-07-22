@@ -6,8 +6,7 @@ import { revoke } from "@/queries/createAndRevoke"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getServerSession(req, res, authOptions)
-
-  // TODO: store who requeste revoke the attestation in metadata
+  // TODO: store who requested revoke the attestation in metadata
   if (session) {
     try {
       const attestationId = req.body.attestationId
