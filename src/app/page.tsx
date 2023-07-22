@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <div className="flex gap-4 items-center">
           <b className="w-32">Addresses:</b>
-          <div className="flex flex-1 gap-4">
+          <div className="flex flex-col flex-1 gap-4">
             {addresses.map((address) => (
               <Link key={address} href={`/address/${address}`} className="px-4 py-2 border rounded-lg shadow-sm font-mono">
                 {address}
