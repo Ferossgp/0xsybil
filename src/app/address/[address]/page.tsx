@@ -3,6 +3,9 @@ import { AlertOctagonIcon, Badge, Loader } from "lucide-react";
 import { signIn, useSession } from "next-auth/react"
 import Header from "@/components/Header";
 import useSWR, { Fetcher } from "swr";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface Params {
   params: {
@@ -10,10 +13,65 @@ interface Params {
   };
 }
 
+interface Fraud {
+  address: string;
+  poaps: number,
+  transactions: number
+}
+
 const fetcher: Fetcher<any, string> = async (...args) => {
   const res = await fetch(...args).then((res) => res.json());
   return res;
 };
+
+const RenderFrauds: React.FC<{ frauds: Fraud[] }> = ({ frauds }) => {
+  return (
+    <div className="flex flex-1 items-center justify-center">
+      <div className="w-full sm:w-2/3">
+        <Table>
+          <TableCaption>Similar accounts</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Address</TableHead>
+              <TableHead>Common Poaps</TableHead>
+              <TableHead>Similar Transactions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {frauds.map((fraud) => (
+              <TableRow key={fraud.address}>
+                <Link href={`/address/${fraud.address}`}>
+                  <TableCell className="font-mono">{fraud.address}</TableCell>
+                </Link>
+                <TableCell>{fraud.poaps} POAPS</TableCell>
+                <TableCell>{fraud.transactions}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
+
+const requestCleanup = async ({ attestationId }: { attestationId: string }) => {
+  await fetch('/api/cleanup', {
+    method: 'POST',
+    body: JSON.stringify({
+      attestationId: attestationId
+    })
+  })
+}
+
+const Revoke: React.FC<{ attestationId: string }> = ({ attestationId }) => {
+  const { trigger } = useSWRMutation('/api/cleanup', requestCleanup, {})
+
+  return (
+    <Button onClick={() => {
+      trigger({ attestationId: attestationId })
+    }}>Request Account Cleanup</Button>
+  )
+}
 
 export default function Address(params: Params) {
   const { data: session, status } = useSession()
@@ -29,8 +87,14 @@ export default function Address(params: Params) {
     </div>
   )
 
-  // TODO: Check if set and revoked
-  const state = data?.attestations.length == 1
+  const state = data?.attestations?.find((attestation: any) => {
+    return attestation.revocationTime === 0
+  }) != null
+
+  const frauds = data?.fraud as Fraud[]
+  const revokable = data?.fraud.filter((fraud: any) => {
+    return fraud.revocationTime === 0
+  })
 
   return (
     <div className="flex flex-col flex-1 gap-8">
@@ -48,12 +112,12 @@ export default function Address(params: Params) {
             </div>
           )}
 
-          {!session && (
-            <div className="flex gap-4">
-              <button className="bg-black shadow-sm rounded-xl py-2 px-4 flex gap-4 justify-center items-center">
+          {!session ? (
+            <div className="flex gap-4 items-center justify-center">
+              {/* <button className="bg-black shadow-sm rounded-xl py-2 px-4 flex gap-4 justify-center items-center">
                 <b className="text-white">Verify with</b>
                 <svg fill="none" viewBox="0 0 144 78" xmlns="http://www.w3.org/2000/svg" className="w-16"><path d="M18 0H0l22.5 39L0 78h18l22.5-39z" fill="#1c68f3"></path><path d="M61.5 0h15v78h-15z" fill="#fff"></path><path clip-rule="evenodd" d="M84 0v78h21c21.539 0 39-17.46 39-39S126.539 0 105 0zm15 63h6c13.255 0 24-10.745 24-24s-10.745-24-24-24h-6z" fill="#fff" fill-rule="evenodd"></path><path d="M39 63h15v15H39z" fill="#1c68f3"></path></svg>
-              </button>
+              </button> */}
               <button className="bg-black shadow-sm rounded-xl py-2 px-4 flex gap-4 justify-center items-center"
                 onClick={(e) => {
                   e.preventDefault()
@@ -81,9 +145,18 @@ export default function Address(params: Params) {
                 </svg>
               </button>
             </div>
+          ) : (
+            revokable?.map((attestation: any) => (
+              <Revoke key={attestation.id} attestationId={attestation.id} />
+            ))
           )}
         </div>
       </div>
+      <RenderFrauds frauds={frauds} />
     </div>
   )
 }
+function useSWRMutation(arg0: string, updateUser: any, options: any): { trigger: any; } {
+  throw new Error("Function not implemented.");
+}
+

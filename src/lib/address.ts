@@ -1,8 +1,8 @@
-import { utils } from 'ethers';
+import { ethers } from "ethers";
 
 export function isAddress(value: string): boolean {
   try {
-    utils.getAddress(value)
+    ethers.utils.getAddress(value)
     return true;
   } catch (e) {
     return false;

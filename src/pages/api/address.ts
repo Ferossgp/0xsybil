@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 import { graphQLClient } from "@/lib/eas";
 import { FETCH_ATTESTATIONS } from "@/queries/eas";
+import { ethers } from "ethers";
+import frauds from '../../database.json'
 
 export const config = {
   runtime: "edge"
@@ -25,20 +27,19 @@ export default async function handler(req: NextRequest) {
   }
 
   const data = await graphQLClient.request<any>(FETCH_ATTESTATIONS, {
-    request: {
-      "where": {
-        "recipient": {
-          "equals": address
-        }
+    "where": {
+      "recipient": {
+        "equals": ethers.utils.getAddress(address)
       }
-    },
+    }
   });
 
-  console.log(data)
+  const fraud = (frauds as Record<string, any>)[address.toLowerCase()]
 
   return new Response(
     JSON.stringify({
-      attestations: data,
+      attestations: data.attestations,
+      fraud: fraud
     }),
     {
       status: 200,
