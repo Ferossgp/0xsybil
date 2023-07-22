@@ -56,7 +56,7 @@ const RenderFrauds: React.FC<{ frauds: Fraud[] }> = ({ frauds }) => {
 }
 
 const requestCleanup = async (url: string, { arg }: { arg: { attestationId: string } }) => {
-  return fetch(url, {
+  await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -64,7 +64,9 @@ const requestCleanup = async (url: string, { arg }: { arg: { attestationId: stri
     body: JSON.stringify({
       attestationId: arg.attestationId
     })
-  })
+  }).catch((err) => { console.error(err) })
+
+  return new Promise((resolve) => { setTimeout(resolve, 10000) })
 }
 
 export default function Address(params: Params) {
