@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 export const EASContractAddress = "0xC2679fBD37d54388Ce493F1DB75320D236e1815e"; // Sepolia v0.26
 
 // Gets a default provider (in production use something else like infura/alchemy)
-const provider = new ethers.providers.JsonRpcProvider(process.env.QUIK_NODE);
+const provider = new ethers.providers.JsonRpcProvider(process.env.QUICKNODE);
 
 const privateKey = process.env.PRIVATE_KEY || "";
 

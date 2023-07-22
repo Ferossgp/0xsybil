@@ -7,11 +7,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // TODO: store who requeste revoke the attestation in metadata
   if (req.body.auth === process.env.AUTH) {
     try {
-      const attestationId = req.body.attestationId
-      const result = await attestData(attestationId)
+      const address = req.body.address
+      const result = await attestData(address)
       res.status(200).send({ result })
+      return
     } catch (err) {
-      res.status(500).send({ error: 'failed to fetch data' })
+      console.log(err)
+      res.status(500).send({ error: 'unexpected error' })
+      return
     }
   }
 

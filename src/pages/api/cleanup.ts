@@ -13,8 +13,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const attestationId = req.body.attestationId
       const result = await revoke(attestationId)
       res.status(200).send({ result })
+      return
     } catch (err) {
-      res.status(500).send({ error: 'failed to fetch data' })
+      console.log(err)
+      res.status(500).send({ error: 'unexpected error' })
+      return
     }
   }
 

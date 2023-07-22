@@ -6,7 +6,7 @@ import useSWR, { Fetcher } from "swr";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ethers } from 'ethers';
+import useSWRMutation from 'swr/mutation'
 
 interface Params {
   params: {
@@ -55,32 +55,27 @@ const RenderFrauds: React.FC<{ frauds: Fraud[] }> = ({ frauds }) => {
   )
 }
 
-const requestCleanup = async ({ attestationId }: { attestationId: string }) => {
-  await fetch('/api/cleanup', {
+const requestCleanup = async (url: string, { arg }: { arg: { attestationId: string } }) => {
+  return fetch(url, {
     method: 'POST',
     body: JSON.stringify({
-      attestationId: attestationId
+      attestationId: arg.attestationId
     })
   })
-}
-
-const Revoke: React.FC<{ attestationId: string }> = ({ attestationId }) => {
-  const { trigger } = useSWRMutation('/api/cleanup', requestCleanup, {})
-
-  return (
-    <Button onClick={() => {
-      trigger({ attestationId: attestationId })
-    }}>Request Account Cleanup</Button>
-  )
 }
 
 export default function Address(params: Params) {
   const { data: session, status } = useSession()
   const address = params.params.address;
 
-  const { data, isLoading } = useSWR(`/api/address?address=${address}`, fetcher);
+  const { data, isLoading, } = useSWR(`/api/address?address=${address}`, fetcher);
+  const { trigger, isMutating } = useSWRMutation('/api/cleanup', requestCleanup, {
+    onSuccess: () => {
+      window.location.reload()
+    }
+  })
 
-  const loading = status === "loading" && isLoading
+  const loading = (status === "loading" && isLoading) || isMutating
 
   if (data == null) return (
     <div className="absolute inset-0 flex justify-center items-center bg-black/[0.7]">
@@ -92,8 +87,8 @@ export default function Address(params: Params) {
     return attestation.revocationTime === 0
   }) != null
 
-  const frauds = data?.fraud as Fraud[]
-  const revokable = data?.fraud.filter((fraud: any) => {
+  const frauds = (data?.fraud ?? []) as Fraud[]
+  const revokable = data?.attestations?.filter((fraud: any) => {
     return fraud.revocationTime === 0
   })
 
@@ -148,7 +143,11 @@ export default function Address(params: Params) {
             </div>
           ) : (
             revokable?.map((attestation: any) => (
-              <Revoke key={attestation.id} attestationId={attestation.id} />
+              <Button
+                key={attestation.id}
+                onClick={() => {
+                  trigger({ attestationId: attestation.id })
+                }}>Request Account Cleanup</Button>
             ))
           )}
         </div>
@@ -157,7 +156,3 @@ export default function Address(params: Params) {
     </div>
   )
 }
-function useSWRMutation(arg0: string, updateUser: any, options: any): { trigger: any; } {
-  throw new Error("Function not implemented.");
-}
-
