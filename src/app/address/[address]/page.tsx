@@ -6,6 +6,7 @@ import useSWR, { Fetcher } from "swr";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ethers } from 'ethers';
 
 interface Params {
   params: {
