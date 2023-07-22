@@ -3,6 +3,7 @@ import { FormEventHandler, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { isAddress } from "@/lib/address";
 
 export default function Home() {
   const [address, setAddress] = useState<string>("");
@@ -13,6 +14,7 @@ export default function Home() {
     router.push(`/address/${address}`);
   };
 
+  console.log(address, isAddress(address));
   return (
     <div className="flex flex-col flex-1 justify-center items-center gap-6">
       <h1 className="text-7xl font-medium font-mono">0xSybil</h1>

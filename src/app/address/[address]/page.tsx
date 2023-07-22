@@ -1,7 +1,8 @@
 "use client";
 import { AlertOctagonIcon, Badge, Loader } from "lucide-react";
-import Link from "next/link";
 import { signIn, useSession } from "next-auth/react"
+import Header from "@/components/Header";
+import useSWR, { Fetcher } from "swr";
 
 interface Params {
   params: {
@@ -9,18 +10,32 @@ interface Params {
   };
 }
 
+const fetcher: Fetcher<any, string> = async (...args) => {
+  const res = await fetch(...args).then((res) => res.json());
+  return res;
+};
+
 export default function Address(params: Params) {
   const { data: session, status } = useSession()
-  const loading = status === "loading"
-
   const address = params.params.address;
-  const state = true
+
+  const { data, isLoading } = useSWR(`/api/address?address=${address}`, fetcher);
+
+  const loading = status === "loading" && isLoading
+
+  if (data == null) return (
+    <div className="absolute inset-0 flex justify-center items-center bg-black/[0.7]">
+      <Loader className="animate-spin text-white" size={48} />
+    </div>
+  )
+
+  // TODO: Check if set and revoked
+  const state = data?.attestations.length == 1
 
   return (
     <div className="flex flex-col flex-1 gap-8">
-      <Link href="/">
-        <h1 className="text-4xl font-medium font-mono">0xSybil</h1>
-      </Link>
+      <Header />
+
       <div className="flex flex-col gap-6 items-center flex-1">
         {state ? (<AlertOctagonIcon className="text-red-500" size={96} />) : (<Badge size={96} className="text-green-500" />)}
         <h1 className="text-2xl">Address: <span className="font-mono">{address}</span> {state ? " was marked with a high risk" : " has not been detectect"}</h1>
