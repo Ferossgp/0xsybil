@@ -198,16 +198,6 @@
       "address": "0xeeff517294d2aa759274703a1b1c5ac81f9a754b",
       "poaps": 45,
       "transactions": 858
-    },
-    {
-      "address": "0xf9342d70a2a6eb46afd7b81138dee01d73b2e419",
-      "poaps": 9,
-      "transactions": 2
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 15,
-      "transactions": null
     }
   ],
   "0x1112c9c86aba7edcc60c15a8616ad9c164b25b33": [
@@ -297,11 +287,6 @@
       "transactions": 238
     },
     {
-      "address": "0xf9342d70a2a6eb46afd7b81138dee01d73b2e419",
-      "poaps": 9,
-      "transactions": null
-    },
-    {
       "address": "0xff37c85c51b8fe35c6be687906d80a7c6eec3148",
       "poaps": 28,
       "transactions": 92
@@ -342,11 +327,6 @@
       "address": "0xeeff517294d2aa759274703a1b1c5ac81f9a754b",
       "poaps": 56,
       "transactions": 1248
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 19,
-      "transactions": null
     }
   ],
   "0xcd0d967449430caaabda422af22f64254c3f1168": [
@@ -363,32 +343,27 @@
     {
       "address": "0x360cebac3453204d44032d4e4d2c9896de48a85c",
       "poaps": 26,
-      "transactions": 1144
+      "transactions": 2288
     },
     {
       "address": "0x5be04938a5d9539403065afde12ec1c7f4ce723f",
       "poaps": 10,
-      "transactions": 182
+      "transactions": 364
     },
     {
       "address": "0xfe8cc72d95633e3a40cf3d221a609ef0c4807745",
       "poaps": 9,
-      "transactions": 330
+      "transactions": 660
     },
     {
       "address": "0xdb1f6e1ccbf72b4ab5346cafa5da338fd1683a17",
       "poaps": 10,
-      "transactions": 181
+      "transactions": 362
     },
     {
       "address": "0x0cd929079c60fdcb3af959c2bd6afc1d5cb0e0fc",
       "poaps": 10,
-      "transactions": 197
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 10,
-      "transactions": null
+      "transactions": 394
     }
   ],
   "0x360cebac3453204d44032d4e4d2c9896de48a85c": [
@@ -410,27 +385,22 @@
     {
       "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
       "poaps": 26,
-      "transactions": 1144
+      "transactions": 2288
     },
     {
       "address": "0xfe8cc72d95633e3a40cf3d221a609ef0c4807745",
       "poaps": 11,
-      "transactions": 341
+      "transactions": 682
     },
     {
       "address": "0xeeff517294d2aa759274703a1b1c5ac81f9a754b",
       "poaps": 50,
-      "transactions": 1197
+      "transactions": 2394
     },
     {
       "address": "0x706f9ac0c9d08d725b899cc8c2582620745cf930",
       "poaps": 9,
       "transactions": 521
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 57,
-      "transactions": null
     }
   ],
   "0xeeff517294d2aa759274703a1b1c5ac81f9a754b": [
@@ -447,24 +417,10 @@
     {
       "address": "0x360cebac3453204d44032d4e4d2c9896de48a85c",
       "poaps": 50,
-      "transactions": 1197
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 31,
-      "transactions": null
+      "transactions": 2394
     }
   ],
   "0xf9342d70a2a6eb46afd7b81138dee01d73b2e419": [
-    {
-      "address": "0x7152cd3891d5b80ca162bbb807e2d4310c084207",
-      "poaps": 9,
-      "transactions": 2
-    },
-    {
-      "address": "0x1112c9c86aba7edcc60c15a8616ad9c164b25b33",
-      "poaps": 9
-    },
     {
       "address": "0xf924efc8830bfa1029fa0cd7a51901a5ec03de3d",
       "poaps": 10,
@@ -474,48 +430,9 @@
       "address": "0x58a35cf59d5c630c057af008a78bc67cdc2ec094",
       "poaps": 12,
       "transactions": 8
-    },
-    {
-      "address": "0x3b91036a4b6693e4373c5416e20e3b209d5a9662",
-      "poaps": 9,
-      "transactions": 1
     }
   ],
-  "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce": [
-    {
-      "address": "0x7152cd3891d5b80ca162bbb807e2d4310c084207",
-      "poaps": 15,
-      "transactions": null
-    },
-    {
-      "address": "0xa8f4a971e71bba82514e669075326c7a923ea6b8",
-      "poaps": 19
-    },
-    {
-      "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
-      "poaps": 10
-    },
-    {
-      "address": "0x360cebac3453204d44032d4e4d2c9896de48a85c",
-      "poaps": 57
-    },
-    {
-      "address": "0xfe8cc72d95633e3a40cf3d221a609ef0c4807745",
-      "poaps": 8
-    },
-    {
-      "address": "0xadcc4b1424baa396393e55b1b5c5549eb4a75a6a",
-      "poaps": 9
-    },
-    {
-      "address": "0xeeff517294d2aa759274703a1b1c5ac81f9a754b",
-      "poaps": 31
-    },
-    {
-      "address": "0x706f9ac0c9d08d725b899cc8c2582620745cf930",
-      "poaps": 8
-    }
-  ],
+  "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce": [],
   "0x56a1ad281b5b5a8621093d279e64edb6a53557fe": [
     {
       "address": "0x5fdb261eff3aafbdf65958d9de49fa1d410a3a10",
@@ -903,7 +820,7 @@
     {
       "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
       "poaps": 10,
-      "transactions": 182
+      "transactions": 364
     },
     {
       "address": "0x19cdb95a4ec9e9c433a0329d7376a242b38410e3",
@@ -1092,7 +1009,7 @@
     {
       "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
       "poaps": 10,
-      "transactions": 181
+      "transactions": 362
     },
     {
       "address": "0x5be04938a5d9539403065afde12ec1c7f4ce723f",
@@ -1281,7 +1198,7 @@
     {
       "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
       "poaps": 10,
-      "transactions": 197
+      "transactions": 394
     },
     {
       "address": "0x5be04938a5d9539403065afde12ec1c7f4ce723f",
@@ -1873,49 +1790,9 @@
       "transactions": 8
     },
     {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 24,
-      "transactions": 2
-    },
-    {
-      "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
-      "poaps": 8,
-      "transactions": 3
-    },
-    {
-      "address": "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b",
-      "poaps": 12,
-      "transactions": 3
-    },
-    {
-      "address": "0x0d12e66b8d56da86b3965192212d6ddb1c75c902",
-      "poaps": 9,
-      "transactions": 1
-    },
-    {
-      "address": "0x9f01e237fb9232140e312935f5581d3d99bdd56f",
-      "poaps": 8,
-      "transactions": null
-    },
-    {
       "address": "0x0ebbbaae85c499c2d1063ec47e546701f1c32a62",
       "poaps": 8,
       "transactions": 7
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 15,
-      "transactions": 2
-    },
-    {
-      "address": "0x5996198ce4ad17d3cf0510e32da2c92a9cc48241",
-      "poaps": 8,
-      "transactions": 2
-    },
-    {
-      "address": "0x68dbebeaa527009430779257b77a06aeed576a29",
-      "poaps": 9,
-      "transactions": 3
     }
   ],
   "0x17a91203a9e9c3519c2f76210497ef7f4be2352f": [
@@ -1928,11 +1805,6 @@
       "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
       "poaps": 23,
       "transactions": 6
-    },
-    {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 15,
-      "transactions": 3
     },
     {
       "address": "0xe3943f5518b3702a9d80618697357b9820b2ccaf",
@@ -1950,26 +1822,6 @@
       "transactions": 18
     },
     {
-      "address": "0x0d12e66b8d56da86b3965192212d6ddb1c75c902",
-      "poaps": 9,
-      "transactions": null
-    },
-    {
-      "address": "0x9f01e237fb9232140e312935f5581d3d99bdd56f",
-      "poaps": 12,
-      "transactions": 2
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 18,
-      "transactions": 4
-    },
-    {
-      "address": "0x58a35cf59d5c630c057af008a78bc67cdc2ec094",
-      "poaps": 10,
-      "transactions": 2
-    },
-    {
       "address": "0x5996198ce4ad17d3cf0510e32da2c92a9cc48241",
       "poaps": 9,
       "transactions": 8
@@ -1980,53 +1832,8 @@
       "transactions": 12
     }
   ],
-  "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 24,
-      "transactions": 2
-    },
-    {
-      "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
-      "poaps": 8
-    },
-    {
-      "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
-      "poaps": 15,
-      "transactions": 3
-    },
-    {
-      "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
-      "poaps": 9,
-      "transactions": null
-    },
-    {
-      "address": "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b",
-      "poaps": 9,
-      "transactions": 2
-    },
-    {
-      "address": "0x0ebbbaae85c499c2d1063ec47e546701f1c32a62",
-      "poaps": 8,
-      "transactions": 4
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 19,
-      "transactions": null
-    },
-    {
-      "address": "0x68dbebeaa527009430779257b77a06aeed576a29",
-      "poaps": 9,
-      "transactions": null
-    }
-  ],
+  "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b": [],
   "0x84e1056ed1b76fb03b43e924ef98833dba394b2b": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 8,
-      "transactions": 3
-    },
     {
       "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
       "poaps": 13,
@@ -2043,28 +1850,14 @@
       "transactions": 30
     },
     {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 9
-    },
-    {
       "address": "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b",
       "poaps": 15,
       "transactions": 36
     },
     {
-      "address": "0x6ea4ea5c3cd5c1f77f9d2114659cbacaea97edb7",
-      "poaps": 8,
-      "transactions": 3
-    },
-    {
       "address": "0x9f01e237fb9232140e312935f5581d3d99bdd56f",
       "poaps": 53,
       "transactions": 207
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 9,
-      "transactions": 3
     },
     {
       "address": "0x68dbebeaa527009430779257b77a06aeed576a29",
@@ -2073,11 +1866,6 @@
     }
   ],
   "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 12,
-      "transactions": 3
-    },
     {
       "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
       "poaps": 19,
@@ -2094,14 +1882,9 @@
       "transactions": 18
     },
     {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 9,
-      "transactions": 2
-    },
-    {
       "address": "0xe3943f5518b3702a9d80618697357b9820b2ccaf",
       "poaps": 21,
-      "transactions": 12
+      "transactions": 24
     },
     {
       "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
@@ -2109,47 +1892,17 @@
       "transactions": 36
     },
     {
-      "address": "0x58a35cf59d5c630c057af008a78bc67cdc2ec094",
-      "poaps": 8,
-      "transactions": 3
-    },
-    {
       "address": "0x68dbebeaa527009430779257b77a06aeed576a29",
       "poaps": 25,
       "transactions": 13
     }
   ],
-  "0x0d12e66b8d56da86b3965192212d6ddb1c75c902": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 9,
-      "transactions": 1
-    },
-    {
-      "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
-      "poaps": 9
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 9,
-      "transactions": 1
-    }
-  ],
+  "0x0d12e66b8d56da86b3965192212d6ddb1c75c902": [],
   "0x9f01e237fb9232140e312935f5581d3d99bdd56f": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 8,
-      "transactions": null
-    },
     {
       "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
       "poaps": 28,
       "transactions": 23
-    },
-    {
-      "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
-      "poaps": 12,
-      "transactions": 2
     },
     {
       "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
@@ -2162,87 +1915,17 @@
       "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
       "poaps": 8,
       "transactions": 7
-    },
-    {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 8,
-      "transactions": 4
-    },
-    {
-      "address": "0x43cb091428bb1369b63a7f0b075d04e6f4f61743",
-      "poaps": 35,
-      "transactions": 1
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 9,
-      "transactions": 1
-    },
-    {
-      "address": "0x6b89823c913a04dd6e903eb415fbaee608864205",
-      "poaps": 11,
-      "transactions": 1
     }
   ],
-  "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 15,
-      "transactions": 2
-    },
-    {
-      "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
-      "poaps": 18,
-      "transactions": 4
-    },
-    {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 19
-    },
-    {
-      "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
-      "poaps": 9,
-      "transactions": 3
-    },
-    {
-      "address": "0x0d12e66b8d56da86b3965192212d6ddb1c75c902",
-      "poaps": 9,
-      "transactions": 1
-    },
-    {
-      "address": "0x0ebbbaae85c499c2d1063ec47e546701f1c32a62",
-      "poaps": 9,
-      "transactions": 1
-    },
-    {
-      "address": "0x5996198ce4ad17d3cf0510e32da2c92a9cc48241",
-      "poaps": 8,
-      "transactions": 1
-    }
-  ],
+  "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade": [],
   "0x5996198ce4ad17d3cf0510e32da2c92a9cc48241": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 8,
-      "transactions": 2
-    },
     {
       "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
       "poaps": 9,
       "transactions": 8
-    },
-    {
-      "address": "0xfce92bdb5d1bba58a844cff9dff8a5e680670ade",
-      "poaps": 8,
-      "transactions": 1
     }
   ],
   "0x68dbebeaa527009430779257b77a06aeed576a29": [
-    {
-      "address": "0xc6b476ea210154ab1b598a4ac437e9af7961128b",
-      "poaps": 9,
-      "transactions": 3
-    },
     {
       "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
       "poaps": 13,
@@ -2254,13 +1937,9 @@
       "transactions": 12
     },
     {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 9
-    },
-    {
       "address": "0xe3943f5518b3702a9d80618697357b9820b2ccaf",
       "poaps": 21,
-      "transactions": 3
+      "transactions": 6
     },
     {
       "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
@@ -2280,16 +1959,6 @@
       "transactions": 6
     },
     {
-      "address": "0x62ae87c843d94a94e6a2431cfe78b00f58301d7b",
-      "poaps": 8,
-      "transactions": null
-    },
-    {
-      "address": "0xe3943f5518b3702a9d80618697357b9820b2ccaf",
-      "poaps": 11,
-      "transactions": 2
-    },
-    {
       "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
       "poaps": 13,
       "transactions": 21
@@ -2307,15 +1976,6 @@
   ],
   "0xe3943f5518b3702a9d80618697357b9820b2ccaf": [
     {
-      "address": "0x55aed0ce035883626e536254dda2f23a5b5d977f",
-      "poaps": 11,
-      "transactions": 2
-    },
-    {
-      "address": "0x8f51dc0791cddddce08052fff939eb7cf0c17856",
-      "poaps": 17
-    },
-    {
       "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
       "poaps": 11,
       "transactions": 8
@@ -2323,20 +1983,15 @@
     {
       "address": "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b",
       "poaps": 21,
-      "transactions": 12
+      "transactions": 24
     },
     {
       "address": "0x68dbebeaa527009430779257b77a06aeed576a29",
       "poaps": 21,
-      "transactions": 3
+      "transactions": 6
     }
   ],
   "0x8f51dc0791cddddce08052fff939eb7cf0c17856": [
-    {
-      "address": "0xe3943f5518b3702a9d80618697357b9820b2ccaf",
-      "poaps": 17,
-      "transactions": null
-    },
     {
       "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
       "poaps": 29,
@@ -2423,29 +2078,8 @@
       "transactions": 59
     }
   ],
-  "0xd53ad0f949378395cc5ac228d59c931d99ac71fe": [
-    {
-      "address": "0x58a35cf59d5c630c057af008a78bc67cdc2ec094",
-      "poaps": 13,
-      "transactions": null
-    }
-  ],
+  "0xd53ad0f949378395cc5ac228d59c931d99ac71fe": [],
   "0x58a35cf59d5c630c057af008a78bc67cdc2ec094": [
-    {
-      "address": "0xd53ad0f949378395cc5ac228d59c931d99ac71fe",
-      "poaps": 13,
-      "transactions": null
-    },
-    {
-      "address": "0x17a91203a9e9c3519c2f76210497ef7f4be2352f",
-      "poaps": 10,
-      "transactions": 2
-    },
-    {
-      "address": "0x7fc80fad32ec41fd5cfcc14eee9c31953b6b4a8b",
-      "poaps": 8,
-      "transactions": 3
-    },
     {
       "address": "0x33041027dd8f4dc82b6e825fb37adf8f15d44053",
       "poaps": 9,
@@ -2461,12 +2095,12 @@
     {
       "address": "0xcd0d967449430caaabda422af22f64254c3f1168",
       "poaps": 9,
-      "transactions": 330
+      "transactions": 660
     },
     {
       "address": "0x360cebac3453204d44032d4e4d2c9896de48a85c",
       "poaps": 11,
-      "transactions": 341
+      "transactions": 682
     },
     {
       "address": "0x94b827335a7f900d97b4c775841fe7251425b52d",
@@ -2477,25 +2111,20 @@
       "address": "0x425c90b7ca97bec31aa2ae2eb58f683f5d11e03a",
       "poaps": 8,
       "transactions": 93
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 8,
-      "transactions": null
     }
   ],
   "0x92cbe89b5cb1c22c2c16bc465caf34e3c80b617d": [
     {
       "address": "0x814942045fa68dfb742915422b6a1c0cd96cf4fc",
       "poaps": 14,
-      "transactions": 4004
+      "transactions": 8008
     }
   ],
   "0x814942045fa68dfb742915422b6a1c0cd96cf4fc": [
     {
       "address": "0x92cbe89b5cb1c22c2c16bc465caf34e3c80b617d",
       "poaps": 14,
-      "transactions": 4004
+      "transactions": 8008
     }
   ],
   "0x706f9ac0c9d08d725b899cc8c2582620745cf930": [
@@ -2503,20 +2132,9 @@
       "address": "0x360cebac3453204d44032d4e4d2c9896de48a85c",
       "poaps": 9,
       "transactions": 521
-    },
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 8,
-      "transactions": null
     }
   ],
-  "0x6ea4ea5c3cd5c1f77f9d2114659cbacaea97edb7": [
-    {
-      "address": "0x84e1056ed1b76fb03b43e924ef98833dba394b2b",
-      "poaps": 8,
-      "transactions": 3
-    }
-  ],
+  "0x6ea4ea5c3cd5c1f77f9d2114659cbacaea97edb7": [],
   "0x94b827335a7f900d97b4c775841fe7251425b52d": [
     {
       "address": "0xfe8cc72d95633e3a40cf3d221a609ef0c4807745",
@@ -2545,44 +2163,10 @@
       "transactions": 7
     }
   ],
-  "0x43cb091428bb1369b63a7f0b075d04e6f4f61743": [
-    {
-      "address": "0x0ebbbaae85c499c2d1063ec47e546701f1c32a62",
-      "poaps": 35,
-      "transactions": 1
-    },
-    {
-      "address": "0x6b89823c913a04dd6e903eb415fbaee608864205",
-      "poaps": 10,
-      "transactions": null
-    }
-  ],
-  "0x6b89823c913a04dd6e903eb415fbaee608864205": [
-    {
-      "address": "0x43cb091428bb1369b63a7f0b075d04e6f4f61743",
-      "poaps": 10,
-      "transactions": null
-    },
-    {
-      "address": "0x0ebbbaae85c499c2d1063ec47e546701f1c32a62",
-      "poaps": 11,
-      "transactions": 1
-    }
-  ],
-  "0xadcc4b1424baa396393e55b1b5c5549eb4a75a6a": [
-    {
-      "address": "0x9f9ebce72c0715cdbad4d589986eb22f6782a1ce",
-      "poaps": 9,
-      "transactions": null
-    }
-  ],
-  "0x3b91036a4b6693e4373c5416e20e3b209d5a9662": [
-    {
-      "address": "0xf9342d70a2a6eb46afd7b81138dee01d73b2e419",
-      "poaps": 9,
-      "transactions": 1
-    }
-  ],
+  "0x43cb091428bb1369b63a7f0b075d04e6f4f61743": [],
+  "0x6b89823c913a04dd6e903eb415fbaee608864205": [],
+  "0xadcc4b1424baa396393e55b1b5c5549eb4a75a6a": [],
+  "0x3b91036a4b6693e4373c5416e20e3b209d5a9662": [],
   "0xb66d6f95933ab2a86161a61ff63687aa0615bdaa": [
     {
       "address": "0x7152cd3891d5b80ca162bbb807e2d4310c084207",
