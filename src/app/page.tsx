@@ -12,12 +12,17 @@ export default function Home() {
       <div className="w-full flex flex-col gap-6 sm:w-2/3">
         <div className="flex gap-4 items-center">
           <b className="w-32">Snapshot:</b>
-          <Input className="flex-1" value="0x1275828152a7f044dca9768212b108df346cd04c0680cd3a6249e8e1f3adddbc" disabled />
+          <Input className="flex-1" value="https://snapshot.org/#/talentprotocol.eth/proposal/0x1275828152a7f044dca9768212b108df346cd04c0680cd3a6249e8e1f3adddbc" disabled />
+        </div>
+         <div className="flex gap-4 items-center">
+          <b className="w-32">Total:</b>
+          <div className="flex flex-col flex-1 gap-4">{addresses.length}</div>
         </div>
         <div className="flex gap-4">
           <b className="w-32">Addresses:</b>
           <div className="flex flex-col flex-1 gap-4">
-            {addresses.map((address) => (
+            {addresses
+            .map((address) => (
               <Link key={address} href={`/address/${address}`} className="px-4 py-2 border rounded-lg shadow-sm font-mono">
                 {address}
               </Link>
