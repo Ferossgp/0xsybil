@@ -18,6 +18,7 @@ interface Fraud {
   address: string;
   poaps: number,
   transactions: number
+  linked: number
 }
 
 const fetcher: Fetcher<any, string> = async (...args) => {
@@ -25,7 +26,23 @@ const fetcher: Fetcher<any, string> = async (...args) => {
   return res;
 };
 
-const RenderFrauds: React.FC<{ frauds: Fraud[] }> = ({ frauds }) => {
+const RenderLinkCell = ({ count, link }: { count: number, link: string }) => {
+  if (count === 0) {
+    return (
+      <TableCell>
+        {count}     
+      </TableCell>
+    )
+  } 
+  return (
+    <TableCell>
+    <Link className="underline " href={link}>{count}</Link>
+    <span className="font-base"> ↗</span>      
+    </TableCell>
+  )
+}
+
+const RenderFrauds: React.FC<{ frauds: Fraud[], mainAddress: string }> = ({ frauds, mainAddress }) => {
   return (
     <div className="flex flex-1 items-center justify-center">
       <div className="w-full sm:w-2/3">
@@ -33,19 +50,25 @@ const RenderFrauds: React.FC<{ frauds: Fraud[] }> = ({ frauds }) => {
           <TableCaption>Similar accounts</TableCaption>
           <TableHeader>
             <TableRow>
+              <TableHead></TableHead>
               <TableHead>Address</TableHead>
               <TableHead>Common Poaps</TableHead>
               <TableHead>Similar Transactions</TableHead>
+              <TableHead>Linked Transactions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {frauds.map((fraud) => (
+            {frauds.map((fraud, i) => (
               <TableRow key={fraud.address}>
-                <Link href={`/address/${fraud.address}`}>
-                  <TableCell className="font-mono">{fraud.address}</TableCell>
-                </Link>
-                <TableCell>{fraud.poaps} POAPS</TableCell>
-                <TableCell>{fraud.transactions}</TableCell>
+                <TableCell>{i + 1}</TableCell>
+                <TableCell>
+                  <Link className="font-mono underline" href={`/address/${fraud.address}`}>{fraud.address} 
+                  </Link>
+                  <span className="font-base"> ↗</span>
+                </TableCell>
+                <TableCell>{fraud.poaps ?? 0}</TableCell>
+                <RenderLinkCell link={`/address/${mainAddress}/${fraud.address}`} count={fraud.transactions}/>
+                <RenderLinkCell link={`/address/${mainAddress}/linked/${fraud.address}`} count={fraud.linked}/>
               </TableRow>
             ))}
           </TableBody>
@@ -103,10 +126,13 @@ export default function Address(params: Params) {
 
       <div className="flex flex-col gap-6 items-center flex-1">
         {state ? (<AlertOctagonIcon className="text-red-500" size={96} />) : (<Badge size={96} className="text-green-500" />)}
-        <h1 className="text-2xl">Address: <span className="font-mono">{address}</span> {state ? " was marked with a high risk" : " has not been detectect"}</h1>
+        <h1 className="text-2xl">Address: <span className="font-mono">
+        {/* <Link href={`https://beta.talentprotocol.com/u/${address}/`}>{address}</Link> */}
+          {address}
+        </span> {state ? " was marked with a high risk" : " has not been detectect"}</h1>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-xl text-center">Prove identity to get cleanedup</h3>
+          <h3 className="text-xl text-center">Prove identity to get cleaned up</h3>
           {loading && (
             <div className="absolute inset-0 flex justify-center items-center bg-black/[0.7]">
               <Loader className="animate-spin text-white" size={48} />
@@ -157,7 +183,7 @@ export default function Address(params: Params) {
           )}
         </div>
       </div>
-      <RenderFrauds frauds={frauds} />
+      <RenderFrauds frauds={frauds} mainAddress={address} />
     </div>
   )
 }
